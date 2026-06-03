@@ -3,3 +3,70 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  font-family: system-ui, sans-serif;
+  background: #f2f2f2;
+  color: #2e2e2e;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+main h1 {
+  padding: 1rem;
+  color: #001aff;
+}
+
+.search-Form {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.search-input {
+  font-size: 1.5rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 1rem;
+  border: none;
+  text-align: center;
+}
+
+.search-btn {
+  font-size: 1rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  border: none;
+  background: #001aff;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.weather-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.weather__cart {
+  background: white;
+  padding: 2rem 5rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.cart__icon {
+  width: 150px;
+  height: 150px;
+}
