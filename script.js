@@ -30,16 +30,15 @@ async function fetchWeather(city) {
     displayWeather(variables);
   } catch (error) {
     console.error("خطا در دریافت اطلاعات: ", error);
-    displayWeather(error.message);
+    displayError(error.message);
   }
 }
 
-function displayWeather(result) {
-  if (typeof result === "string") {
-    app.weatherInfo.innerHTML = `<p class="error-text">خطا: ${error.message}. لطفا دوباره تلاش کنید.</p>`;
-    return;
-  }
+function displayError(message) {
+  app.weatherInfo.innerHTML = `<p class="error-text">خطا: ${message}. لطفا دوباره تلاش کنید.</p>`;
+}
 
+function displayWeather(result) {
   app.weatherInfo.innerHTML = `
     <article class="weather__cart">
       <img class="cart__icon" src="${result.conditionIcon}" alt="آیکون آب و هوا" />
