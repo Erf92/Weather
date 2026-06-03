@@ -4,6 +4,7 @@ const app = {
   searchForm: document.getElementById("searchForm"),
   cityInput: document.getElementById("cityInput"),
   weatherInfo: document.getElementById("weatherInfo"),
+  searchBtn: document.getElementById("searchBtn"),
 };
 
 async function fetchWeather(city) {
@@ -28,9 +29,11 @@ async function fetchWeather(city) {
     };
 
     displayWeather(variables);
+    app.searchBtn.disabled = false;
   } catch (error) {
     console.error("خطا در دریافت اطلاعات: ", error);
     displayError(error.message);
+    app.searchBtn.disabled = false;
   }
 }
 
@@ -52,8 +55,10 @@ function displayWeather(result) {
 
 if (app.searchForm) {
   app.searchForm.addEventListener("submit", (e) => {
+    app.searchBtn.disabled = true;
     e.preventDefault();
     const city = app.cityInput.value.trim();
+    app.cityInput.value = "";
     if (city) fetchWeather(city);
   });
 }

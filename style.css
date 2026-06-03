@@ -45,6 +45,12 @@ main h1 {
   background: #001aff;
   color: white;
   margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.search-btn:disabled {
+  background: #606060;
+  cursor: not-allowed;
 }
 
 .weather-info {
