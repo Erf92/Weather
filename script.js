@@ -55,11 +55,12 @@ function displayWeather(result) {
 
 if (app.searchForm) {
   app.searchForm.addEventListener("submit", (e) => {
-    app.searchBtn.disabled = true;
     e.preventDefault();
     const city = app.cityInput.value.trim();
+    if (!city) return;
+    app.searchBtn.disabled = true;
     app.cityInput.value = "";
-    if (city) fetchWeather(city);
+    fetchWeather(city);
   });
 }
 
