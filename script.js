@@ -44,7 +44,7 @@ function displayError(message) {
 function displayWeather(result) {
   app.weatherInfo.innerHTML = `
     <article class="weather__cart">
-      <img class="cart__icon" src="${result.conditionIcon}" alt="آیکون آب و هوا" />
+      <img class="cart__icon" src="https:${result.conditionIcon}" alt="آیکون آب و هوا" />
       <h2 class="cart__location">${result.locationName}</h2>
       <span class="cart__temp">${result.tempCelsius} درجه سانتی گراد</span>
       <span class="cart__condition">${result.condition}</span>
